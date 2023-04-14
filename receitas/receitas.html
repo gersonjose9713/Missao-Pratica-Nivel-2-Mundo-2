@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Receitas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .card {
+            width: 250px;
+            margin-right: 10  px;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-text {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body onload="preencheCatalogo()">
+    <div class="container-fluid bg-warning">
+        <h1>Catálogo de Receitas</h1>
+        <div class="d-flex flex-wrap" id="pnlCatalogo"></div>
+    </div>
+
+    <script>
+        let receitas = [];
+
+        fetch('receitas.json')
+            .then(response => response.json())
+            .then(data => {
+                receitas = data;
+                preencheCatalogo();
+            });
+
+        function getListaIngredientes(receita) {
+            let lista = "<ul>";
+            lista += receita.ingredientes.map(ingrediente => `<li>${ingrediente}</li>`).reduce((a, b) => a + b);
+            lista += "</ul>";
+            return lista;
+        }
+
+        function getCard(receita) {
+            return `
+                <div class="card">
+                    <img src="${receita.imagem}" class="card-img-top" alt="${receita.titulo}">
+                    <div class="card-body">
+                        <h5 class="card-title">${receita.titulo}</h5>
+                        <div class="card-text">
+                            ${getListaIngredientes(receita)}
+                            <hr>
+                            ${receita.preparo}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function preencheCatalogo() {
+            let catalogo = document.getElementById("pnlCatalogo");
+            let html = receitas.map(getCard).reduce((a, b) => a + b);
+            catalogo.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+[
+  {
+    "titulo": "Bolo de Cenoura",
+    "imagem": "imagens/bolo-cenoura.png",
+    "preparo": "Bata todos os ingredientes no liquidificador e asse em forno pré-aquecido a 180°C por 40 minutos.",
+    "ingredientes": [
+      "3 cenouras médias",
+      "3 ovos",
+      "1 xícara de óleo",
+      "2 xícaras de açúcar",
+      "2 xícaras de farinha de trigo",
+      "1 colher de sopa de fermento em pó"
+    ]
+  },
+  {
+    "titulo": "Torta de Frango",
+    "imagem": "imagens/torta-frango.png",
+    "preparo": "Misture todos os ingredientes da massa e reserve. Refogue o frango com os temperos e monte a torta em uma forma untada, intercalando camadas de massa e recheio. Asse em forno pré-aquecido a 180°C por 40 minutos.",
+    "ingredientes": [
+      "Massa:",
+      "3 xícaras de farinha de trigo",
+      "1 xícara de óleo",
+      "2 ovos",
+      "1 colher de sopa de fermento em pó",
+      "Recheio:",
+      "500g de peito de frango cozido e desfiado",
+      "1 cebola picada",
+      "2 dentes de alho picados",
+      "1 tomate picado",
+      "Sal e pimenta a gosto"
+    ]
+  },
+  {
+    "titulo": "Sopa de Legumes",
+    "imagem": "imagens/sopa-legumes.png",
+    "preparo": "Cozinhe os legumes em água fervente até ficarem macios. Bata no liquidificador com o caldo do cozimento até obter um creme homogêneo. Tempere com sal e pimenta a gosto e sirva quente.",
+    "ingredientes": [
+      "4 batatas médias",
+      "2 cenouras médias",
+      "1 chuchu",
+      "1 abobrinha",
+      "Sal e pimenta a gosto"
+    ]
+  }
+]

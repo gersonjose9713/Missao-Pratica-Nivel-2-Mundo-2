@@ -10,33 +10,37 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>Document</title>
+    <title>Ordenação de Valores</title>
   </head>
   <body>
     <header>
-      <div id="app">{{ message }}</div>
-    </header>
-    <main>
       <h1>Ordenação de Valores</h1>
-      <label for="valor">Valor:</label>
-      <input type="number" id="valor" name="valor"/>
-      <button onclick="add()">Adicionar</button>
-      <br>
-      <br>
-      <label for="sortMethod">Método de Ordenação:</label>
-      <select id="sortMethod" name="sortMethod">
-        <option value="bubble_sort" selected>Bubble Sort</option>
-        <option value="selection_sort">Selection Sort</option>
-        <option value="quick_sort">Quick Sort</option>
-      </select>
-      <br>
-      <br>
-      <button id="ordenarButton" onclick="ordenar()">Ordenar</button>
-      <button id="misturarButton" onclick="misturar()">Misturar</button>
-      <br>
-      <br>
-      <ul id="valores"></ul>
+    </header>
+    <main class="container-fluid">        
+      <div class="form-group">
+        <div>
+          <label for="valor">Valor</label>
+          <input class="form-control form-control" type="number" id="valor" name="valor"/>
+          <br>
+          <button class="btn btn-primary" onclick="add()">Adicionar</button>
+        </div>
+        <div>
+          <br>
+          <label for="sortMethod">Método de Ordenação</label>
+          <select class="form-control form-control" id="sortMethod" name="sortMethod">
+            <option value="bubble_sort" selected>Bubble Sort</option>
+            <option value="selection_sort">Selection Sort</option>
+            <option value="quick_sort">Quick Sort</option>
+            <option value="particionamento">Particionamento</option>
+          </select>
+          <br>
+          <button class="btn btn-primary" id="ordenarButton" onclick="ordenar()">Ordenar</button>
+          <button class="btn btn-primary" id="misturarButton" onclick="misturar()">Misturar</button>
+          <br>
+          <br>
+          <ul id="valores"></ul>
+        </div>
+      </div>
     </main>
     <footer></footer>
   </body>

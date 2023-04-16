@@ -1,13 +1,3 @@
-const { createApp } = Vue;
-
-createApp({
-  data() {
-    return {
-      message: 'Hello Vue!',
-    };
-  },
-}).mount('#app');
-
 function autalizarSelect() {
   let select = document.querySelector('#sortMethod');
   let optionValue = select.options[select.selectedIndex];
@@ -44,6 +34,9 @@ function ordenar() {
       selection_sort(valores);
       break;
     case 'quick_sort':
+      quick_sort(valores);
+      break;
+    case 'particionamento':
       quick_sort(valores);
       break;
     default:
